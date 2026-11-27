@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>책갈피 독서모임 멤버 모집 신청서</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f4f1; --surface:#fff; --ink:#18232b; --muted:#56646d; --line:#cdd5cf;
+  --accent:#1f4e5f; --accent-ink:#fff; --ribbon:#e0a526; --err:#b3261e;
+  box-sizing:border-box; color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#10181d; --surface:#18242b; --ink:#e8eeea; --muted:#9fb0b8; --line:#2b3a42;
+    --accent:#7fb8c9; --accent-ink:#0e1a20; --ribbon:#e8b84a; --err:#f2b8b5; color-scheme:dark;}
+}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.7;font-size:16px;word-break:keep-all}
+.wrap{max-width:680px;margin:0 auto;padding:48px 20px 64px}
+h1,h2{font-family:"Noto Serif KR","Batang",serif;line-height:1.35}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 12px;border-left:8px solid var(--ribbon);padding-left:14px}
+.intro{color:var(--muted);margin:0 0 36px}
+fieldset{border:0;margin:0 0 36px;padding:0}
+legend{font-family:"Noto Serif KR",serif;font-weight:700;font-size:21px;margin-bottom:6px;padding:0}
+.sub{color:var(--muted);font-size:14px;margin:0 0 18px}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin-bottom:14px}
+.q > label,.q > .ql{display:block;font-weight:500;margin-bottom:4px}
+.req::after{content:" *";color:var(--err)}
+.help{display:block;color:var(--muted);font-size:14px;margin-bottom:8px;font-weight:400}
+input[type=text],input[type=tel],input[type=email],textarea{width:100%;font:inherit;color:inherit;background:transparent;
+  border:0;border-bottom:2px solid var(--line);padding:8px 2px;border-radius:0}
+textarea{min-height:96px;resize:vertical;border:1px solid var(--line);border-radius:6px;padding:10px}
+input:focus,textarea:focus{outline:0;border-color:var(--accent)}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:6px 0;cursor:pointer}
+.opt input{margin-top:6px;accent-color:var(--accent);width:18px;height:18px;flex:none}
+.opt input[type=text]{margin:0;flex:1}
+.err{color:var(--err);font-size:14px;margin-top:6px;display:none}
+.q.invalid{border-color:var(--err)}.q.invalid .err{display:block}
+button{font:inherit;font-weight:500;background:var(--accent);color:var(--accent-ink);border:0;border-radius:6px;padding:15px 32px;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+:is(button,input,textarea):focus-visible{outline:3px solid var(--ribbon);outline-offset:2px}
+.privacy{font-size:14px;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin-bottom:14px}
+.privacy ul{margin:0;padding-left:18px}
+.done{display:none;text-align:center;padding:64px 0}
+.done h2{font-size:28px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<form id="f" novalidate>
+  <h1>책갈피 독서모임<br>멤버 모집 신청서</h1>
+  <p class="intro">신청서 작성은 약 5분 걸립니다. <span class="req"></span> 표시는 필수 질문입니다.</p>
+
+  <fieldset>
+    <legend>기본 정보</legend>
+    <p class="sub">참여 안내와 모임 공지를 위해 필요한 정보입니다.</p>
+
+    <div class="q" data-req>
+      <label class="req" for="name">이름 (또는 닉네임)</label>
+      <input type="text" id="name" name="이름" autocomplete="name" required>
+      <div class="err">이름을 입력해 주세요.</div>
+    </div>
+    <div class="q" data-req>
+      <label class="req" for="tel">연락처</label>
+      <span class="help">예: 010-1234-5678</span>
+      <input type="tel" id="tel" name="연락처" autocomplete="tel" inputmode="tel" pattern="01[0-9]-?[0-9]{3,4}-?[0-9]{4}" required>
+      <div class="err">010-0000-0000 형식으로 입력해 주세요.</div>
+    </div>
+    <div class="q" data-req>
+      <label class="req" for="email">이메일</label>
+      <input type="email" id="email" name="이메일" autocomplete="email" required>
+      <div class="err">올바른 이메일 주소를 입력해 주세요.</div>
+    </div>
+    <div class="q">
+      <span class="ql">연령대</span>
+      <label class="opt"><input type="radio" name="연령대" value="20대">20대</label>
+      <label class="opt"><input type="radio" name="연령대" value="30대">30대</label>
+      <label class="opt"><input type="radio" name="연령대" value="40대">40대</label>
+      <label class="opt"><input type="radio" name="연령대" value="50대">50대</label>
+      <label class="opt"><input type="radio" name="연령대" value="60대 이상">60대 이상</label>
+      <label class="opt"><input type="radio" name="연령대" value="밝히고 싶지 않음">밝히고 싶지 않아요</label>
+    </div>
+    <div class="q" data-req>
+      <label class="req" for="area">거주 지역 (시·구 정도)</label>
+      <span class="help">오프라인 모임 장소를 정할 때 참고합니다.</span>
+      <input type="text" id="area" name="거주 지역" required>
+      <div class="err">거주 지역을 입력해 주세요.</div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>독서 취향</legend>
+    <p class="sub">정답은 없어요. 편하게 적어 주세요.</p>
+
+    <div class="q" data-req data-group="radio">
+      <span class="ql req">최근 1년간 책을 얼마나 읽으셨나요?</span>
+      <label class="opt"><input type="radio" name="독서량" value="거의 읽지 못함">거의 읽지 못했어요</label>
+      <label class="opt"><input type="radio" name="독서량" value="1~5권">1년에 1~5권</label>
+      <label class="opt"><input type="radio" name="독서량" value="6~12권">1년에 6~12권</label>
+      <label class="opt"><input type="radio" name="독서량" value="13권 이상">1년에 13권 이상</label>
+      <div class="err">하나를 선택해 주세요.</div>
+    </div>
+    <div class="q" data-req data-group="checkbox">
+      <span class="ql req">관심 있는 분야 (복수 선택)</span>
+      <label class="opt"><input type="checkbox" name="관심 분야" value="소설">소설</label>
+      <label class="opt"><input type="checkbox" name="관심 분야" value="에세이">에세이</label>
+      <label class="opt"><input type="checkbox" name="관심 분야" value="인문·철학">인문·철학</label>
+      <label class="opt"><input type="checkbox" name="관심 분야" value="사회·정치">사회·정치</label>
+      <label class="opt"><input type="checkbox" name="관심 분야" value="과학">과학</label>
+      <label class="opt"><input type="checkbox" name="관심 분야" value="역사">역사</label>
+      <label class="opt"><input type="checkbox" name="관심 분야" value="경제·경영">경제·경영</label>
+      <label class="opt"><input type="checkbox" name="관심 분야" value="자기계발">자기계발</label>
+      <label class="opt"><input type="checkbox" name="관심 분야" value="시">시</label>
+      <label class="opt"><input type="checkbox" name="관심 분야" value="만화·그래픽노블">만화·그래픽노블</label>
+      <label class="opt"><input type="checkbox" name="관심 분야" value="기타">기타 <input type="text" name="관심 분야 기타" aria-label="기타 분야 직접 입력"></label>
+      <div class="err">하나 이상 선택해 주세요.</div>
+    </div>
+    <div class="q">
+      <label for="recent">최근 인상 깊게 읽은 책</label>
+      <span class="help">책 제목과 좋았던 점을 한두 문장으로 적어 주세요.</span>
+      <textarea id="recent" name="인상 깊은 책"></textarea>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>참여 의사</legend>
+
+    <div class="q" data-req>
+      <label class="req" for="why">독서모임에 참여하고 싶은 이유</label>
+      <textarea id="why" name="참여 이유" required></textarea>
+      <div class="err">참여 이유를 적어 주세요.</div>
+    </div>
+    <div class="q">
+      <label for="want">모임에서 기대하는 점이나 해 보고 싶은 활동</label>
+      <span class="help">예: 토론, 필사, 서평 쓰기, 책 교환 등</span>
+      <textarea id="want" name="기대하는 점"></textarea>
+    </div>
+    <div class="q" data-req data-group="radio">
+      <span class="ql req">선호하는 모임 방식</span>
+      <label class="opt"><input type="radio" name="모임 방식" value="오프라인">오프라인</label>
+      <label class="opt"><input type="radio" name="모임 방식" value="온라인">온라인</label>
+      <label class="opt"><input type="radio" name="모임 방식" value="둘 다 괜찮음">둘 다 괜찮아요</label>
+      <div class="err">하나를 선택해 주세요.</div>
+    </div>
+    <div class="q" data-req data-group="radio">
+      <span class="ql req">월 1회 정기 모임에 꾸준히 참여할 수 있나요?</span>
+      <label class="opt"><input type="radio" name="참여 가능 여부" value="대부분 참여 가능">네, 대부분 참여할 수 있어요</label>
+      <label class="opt"><input type="radio" name="참여 가능 여부" value="가끔 빠질 수 있음">월 1회 정도는 빠질 수 있어요</label>
+      <label class="opt"><input type="radio" name="참여 가능 여부" value="일정 맞추기 어려움">일정이 맞지 않을 때가 많을 것 같아요</label>
+      <div class="err">하나를 선택해 주세요.</div>
+    </div>
+    <div class="q" data-req data-group="radio">
+      <span class="ql req">월 회비(0,000원, 도서 구입비 별도)에 동의하시나요?</span>
+      <label class="opt"><input type="radio" name="회비 동의" value="동의">네, 동의해요</label>
+      <label class="opt"><input type="radio" name="회비 동의" value="비동의">아니요</label>
+      <label class="opt"><input type="radio" name="회비 동의" value="조정 필요">조정이 필요해요</label>
+      <div class="err">하나를 선택해 주세요.</div>
+    </div>
+    <div class="q">
+      <label for="msg">운영진에게 하고 싶은 말이나 궁금한 점</label>
+      <textarea id="msg" name="문의"></textarea>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>개인정보 수집·이용 동의</legend>
+    <div class="privacy">
+      <ul>
+        <li>수집 항목: 이름, 연락처, 이메일, 연령대, 거주 지역, 독서 취향 및 참여 의사</li>
+        <li>이용 목적: 모임 참여자 선정 및 안내, 모임 운영 공지</li>
+        <li>보유 기간: 모임 종료 또는 탈퇴 요청 시까지 (선정되지 않은 경우 안내 후 즉시 파기)</li>
+        <li>동의를 거부할 수 있으나, 거부 시 신청이 제한됩니다.</li>
+      </ul>
+    </div>
+    <div class="q" data-req data-group="checkbox">
+      <label class="opt"><input type="checkbox" name="개인정보 동의" value="동의"><span class="req">위 내용에 동의합니다</span></label>
+      <div class="err">동의해야 신청할 수 있어요.</div>
+    </div>
+  </fieldset>
+
+  <button type="submit" id="submit">신청서 제출하기</button>
+</form>
+
+<div class="done" id="done" role="status">
+  <h2>신청해 주셔서 감사합니다!</h2>
+  <p>모집 마감 후 입력해 주신 연락처로 참여 여부를 안내드릴게요.</p>
+</div>
+</div>
+
+<script>
+// 응답을 받을 주소(Apps Script 웹앱 URL 등)를 넣으세요. 비워 두면 화면 테스트만 됩니다.
+var SUBMIT_URL = "";
+
+var form = document.getElementById("f");
+
+function groupValid(q) {
+  return !!q.querySelector("input:checked");
+}
+
+function validate() {
+  var firstBad = null;
+  form.querySelectorAll("[data-req]").forEach(function (q) {
+    var ok;
+    if (q.dataset.group) {
+      ok = groupValid(q);
+    } else {
+      var el = q.querySelector("input,textarea");
+      ok = el.value.trim() !== "" && el.checkValidity();
+    }
+    q.classList.toggle("invalid", !ok);
+    if (!ok && !firstBad) firstBad = q;
+  });
+  if (firstBad) firstBad.scrollIntoView({ behavior: "smooth", block: "center" });
+  return !firstBad;
+}
+
+function collect() {
+  var data = {};
+  new FormData(form).forEach(function (v, k) {
+    if (k === "관심 분야 기타") return;
+    if (data[k] === undefined) data[k] = v;
+    else data[k] += ", " + v;
+  });
+  var etc = form.elements["관심 분야 기타"].value.trim();
+  if (etc && data["관심 분야"]) data["관심 분야"] = data["관심 분야"].replace("기타", "기타(" + etc + ")");
+  data["제출 시각"] = new Date().toLocaleString("ko-KR");
+  return data;
+}
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  if (!validate()) return;
+  var btn = document.getElementById("submit");
+  btn.disabled = true;
+  var data = collect();
+  var finish = function () {
+    form.style.display = "none";
+    document.getElementById("done").style.display = "block";
+    window.scrollTo(0, 0);
+  };
+  if (!SUBMIT_URL) { console.log(data); finish(); return; }
+  fetch(SUBMIT_URL, {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
+    body: JSON.stringify(data)
+  }).then(finish).catch(function () {
+    btn.disabled = false;
+    alert("제출 중 문제가 생겼어요. 잠시 후 다시 시도해 주세요.");
+  });
+});
+
+form.addEventListener("input", function (e) {
+  var q = e.target.closest(".q");
+  if (q) q.classList.remove("invalid");
+});
+</script>
+</body>
+</html>
